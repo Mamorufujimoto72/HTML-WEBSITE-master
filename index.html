@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="Portfolio, About me, Ambition, Mechanic">
+    <meta name="description" content="My website Portfolio for my HTML project">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="Abi Zion">
+    <title>Pedro's Portfolio</title>
+  </head>
+  <body>
+
+    <!-- Language Selector -->
+
+    <!-- Navigation -->
+    <ul class="button">
+      <li><a href="index.html"><button id="nav-home">Home</button></a></li>
+      <li><a href="about.html"><button id="nav-about">About</button></a></li>
+      <li><a href="https://docs.google.com/forms/d/e/1FAIpQLSfvvYOi3P4kXXWAkk2XlRonmRcYKZDZKNMmKwkLk6TzKOT_Yg/viewform?usp=sharing">
+        <button id="nav-contact">Contact Us</button></a></li>
+        <div class="language-selector">
+          <select id="language" onchange="changeLanguage()">
+              <option value="en">English</option>
+              <option value="de">Deutsch</option>
+          </select>
+        </div>        
+    </ul>
+
+    <div class="container"> 
+        <div class="pfp">
+          <img src="hardimg.png" width="300" height="300"/>
+          <p id="name">Pedro</p>
+        </div>
+
+        <h1 id="ambition-title">Ambition</h1>
+
+        <h2 id="ambition-text">
+          With grease-stained hands and a heart so bold,<br>
+          I’ll chase my dreams as stories unfold.<br>
+          A wrench in my pocket, the road in my sight,<br>
+          Fixing engines by day, chasing stars at night.<br />
+          <br>
+          From city streets to desert sands,<br>
+          I’ll mend the wheels with steady hands.<br>
+          Roaring motors, humming tunes,<br>
+          Under blazing suns and silver moons.<br /> 
+          <br>
+          In Tokyo’s glow or Rome’s old ways,<br>
+          On highways long or mountain bays,<br>
+          Every engine tells a tale,<br>
+          Of distant lands and whispered trails.<br />
+          <br>
+          No place too far, no road too steep,<br>
+          With roaring hearts, our dreams we keep.<br>
+          For every mile and bolt I turn,<br>
+          A piece of life I’ll always learn.
+        </h2>
+    </div>
+
+    <script>
+      function changeLanguage() {
+          const language = document.getElementById("language").value;
+
+          const translations = {
+              en: {
+                  navHome: "Home",
+                  navAbout: "About",
+                  navContact: "Contact Us",
+                  ambitionTitle: "Ambition",
+                  ambitionText: `With grease-stained hands and a heart so bold,<br>
+                      I’ll chase my dreams as stories unfold.<br>
+                      A wrench in my pocket, the road in my sight,<br>
+                      Fixing engines by day, chasing stars at night.<br><br>
+                      From city streets to desert sands,<br>
+                      I’ll mend the wheels with steady hands.<br>
+                      Roaring motors, humming tunes,<br>
+                      Under blazing suns and silver moons.<br><br>
+                      In Tokyo’s glow or Rome’s old ways,<br>
+                      On highways long or mountain bays,<br>
+                      Every engine tells a tale,<br>
+                      Of distant lands and whispered trails.<br><br>
+                      No place too far, no road too steep,<br>
+                      With roaring hearts, our dreams we keep.<br>
+                      For every mile and bolt I turn,<br>
+                      A piece of life I’ll always learn.`
+              },
+              de: {
+                  navHome: "Startseite",
+                  navAbout: "Über mich",
+                  navContact: "Kontakt",
+                  ambitionTitle: "Ambition",
+                  ambitionText: `Mit ölverschmierten Händen und mutigem Herz,<br>
+                      Verfolge ich meine Träume, ein Kunstwerk.<br>
+                      Ein Schraubenschlüssel in meiner Tasche, die Straße im Blick,<br>
+                      Motoren reparieren am Tag, Sterne jagen bei Nacht.<br><br>
+                      Von Stadtstraßen bis Wüstensand,<br>
+                      Repariere ich Räder mit ruhiger Hand.<br>
+                      Dröhnende Motoren, summende Melodien,<br>
+                      Unter brennenden Sonnen und silbernen Monden.<br><br>
+                      Im Glanz Tokios oder Roms alter Zeit,<br>
+                      Auf langen Autobahnen oder an Bergeshöhen weit,<br>
+                      Jedes Fahrzeug erzählt eine Geschichte,<br>
+                      Von fernen Ländern und leisen Berichten.<br><br>
+                      Kein Ort zu fern, kein Weg zu steil,<br>
+                      Mit donnernden Herzen bleiben wir treu.<br>
+                      Für jede Meile und Schraube, die ich dreh’,<br>
+                      Ein Stück Leben, das ich versteh’.`
+              }
+          };
+
+          // Apply translations
+          document.getElementById("nav-home").textContent = translations[language].navHome;
+          document.getElementById("nav-about").textContent = translations[language].navAbout;
+          document.getElementById("nav-contact").textContent = translations[language].navContact;
+          document.getElementById("ambition-title").textContent = translations[language].ambitionTitle;
+          document.getElementById("ambition-text").innerHTML = translations[language].ambitionText;
+      }
+    </script>
+
+  </body>
+</html>

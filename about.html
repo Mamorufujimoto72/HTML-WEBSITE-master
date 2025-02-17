@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="Portfolio, About me, Ambition, Mechanic">
+    <meta name="description" content="My website Portfolio for my HTML project">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="Abi Zion">    
+    <title>About Pedro</title>
+    <link rel="stylesheet" href="style2.css">
+</head>
+<body>
+
+    <!-- Navigation -->
+    <ul class="button">
+      <li><a href="index.html"><button id="nav-home">Home</button></a></li>
+      <li><a href="about.html"><button id="nav-about">About</button></a></li>
+      <li><a href="https://docs.google.com/forms/d/e/1FAIpQLSfvvYOi3P4kXXWAkk2XlRonmRcYKZDZKNMmKwkLk6TzKOT_Yg/viewform?usp=sharing">
+        <button id="nav-contact">Contact Us</button></a></li>
+        <div class="language-selector">
+          <select id="language" onchange="changeLanguage()">
+              <option value="en">English</option>
+              <option value="de">Deutsch</option>
+          </select>
+        </div>        
+    </ul>
+
+
+    <!-- Main Container -->
+    <div class="container">
+
+        <!-- Car Section -->
+        <div class="section">
+            <img src="pedro'scar.png" alt="Pedro's Car">
+            <p id="car-text">I love working on cars. It brings peace to my soul. My favorite car is my truck.</p>
+        </div>
+
+        <!-- About Me Section -->
+        <div class="section">
+            <h1 id="about-title">About Me</h1>
+            <ul>
+                <li id="name">Name: Pedro</li>
+                <li id="age">Age: 27</li>
+                <li id="nationality">Nationality: German</li>
+            </ul>
+            <img src="bigboy.png" />
+        </div>
+
+        <!-- Favorite Dish Section -->
+        <div class="section">
+            <img src="chicken.png" alt="Fried Chicken">
+            <h1 id="dish-title">My Favorite Dish Is:</h1>
+            <p id="dish-text">Fried Chicken</p>
+        </div>
+
+    </div>
+
+    <script>
+        function changeLanguage() {
+            const language = document.getElementById("language").value;
+
+            const translations = {
+                en: {
+                    carText: "I love working on cars. It brings peace to my soul. My favorite car is my truck.",
+                    aboutTitle: "About Me",
+                    name: "Name: Pedro",
+                    age: "Age: 27",
+                    nationality: "Nationality: German",
+                    dishTitle: "My Favorite Dish Is:",
+                    dishText: "Fried Chicken"
+                },
+                de: {
+                    carText: "Ich liebe es, an Autos zu arbeiten. Es bringt Frieden in meine Seele. Mein Lieblingsauto ist mein Truck.",
+                    aboutTitle: "Über mich",
+                    name: "Name: Pedro",
+                    age: "Alter: 27",
+                    nationality: "Nationalität: Deutsch",
+                    dishTitle: "Mein Lieblingsgericht ist:",
+                    dishText: "Brathähnchen"
+                }
+            };
+
+            // Apply translations
+            document.getElementById("car-text").textContent = translations[language].carText;
+            document.getElementById("about-title").textContent = translations[language].aboutTitle;
+            document.getElementById("name").textContent = translations[language].name;
+            document.getElementById("age").textContent = translations[language].age;
+            document.getElementById("nationality").textContent = translations[language].nationality;
+            document.getElementById("dish-title").textContent = translations[language].dishTitle;
+            document.getElementById("dish-text").textContent = translations[language].dishText;
+        }
+    </script>
+
+</body>
+</html>

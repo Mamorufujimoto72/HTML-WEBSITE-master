@@ -1,0 +1,101 @@
+/* General Styles */
+body {
+  background-image: url('Garage.jpeg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* Navigation Bar */
+ul.button {
+  margin: 10px;
+  padding: 0;
+  overflow: hidden;
+  background-color: #38353a;
+  border-radius: 10px;
+  opacity: 0.9;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+li {
+  display: inline;
+}
+
+button, a {
+  color: white;
+  background-color: #38353a;
+  border: none;
+  font-size: 18px;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 10px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+button:hover {
+  background-color: rgb(48, 40, 46);
+}
+
+/* Main Layout */
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+}
+
+/* Individual Sections */
+.section {
+  background-color: #38353a;
+  border-radius: 20px;
+  padding: 20px;
+  max-width: 400px;
+  text-align: center;
+  opacity: 0.9;
+}
+
+.section img {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 20px;
+}
+
+.section h1, .section p, .section li {
+  color: white;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .container {
+      flex-direction: column;
+      align-items: center;
+  }
+}
+
+@media (max-width: 768px) {
+  button, a {
+      font-size: 16px;
+      padding: 8px 15px;
+  }
+}
+select{
+  margin-top: 50%;
+  align-items: right;
+  color: rgb(255, 255, 255);
+  text-align: center;
+  background-color: #38353a;
+  border: none;
+  width: 100%;
+  max-width: 300px;
+  font-size: 20px;
+  text-decoration: none;
+  gap: 10px;
+  margin-top: 20px;
+}
